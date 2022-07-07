@@ -1,0 +1,20 @@
+type Query{
+    getAllUser: [User]
+}
+
+type User{
+    id: Int!
+    name: String!
+    email: String!
+}
+
+type SuccessType{
+    success: Boolean!
+    message: String!
+}
+
+type Mutation{
+    userAdd(name: String!, email: String!): SuccessType
+    userUpdate(id:Int!, name:String!, email:String!): SuccessType
+    userDelete(id:Int!): SuccessType
+}
